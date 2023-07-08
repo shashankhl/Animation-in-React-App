@@ -27,13 +27,6 @@ class List extends Component {
 
   render() {
     const listItems = this.state.items.map((item, index) => (
-      // <li key={index}
-      //     className="ListItem"
-      //     onClick={() => this.removeItemHandler(index)}
-      //   >
-      //     {item}
-      //   </li>
-
       <CSSTransition key={index} classNames="fade" timeout={300}>
         <li className="ListItem" onClick={() => this.removeItemHandler(index)}>
           {item}

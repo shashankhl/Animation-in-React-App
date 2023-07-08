@@ -24,8 +24,6 @@ class App extends Component {
     return (
       <div className="App">
         <h1>React Animations</h1>
-        {/* <Modal show={this.state.modalIsOpen} closed={this.closeModal} />
-        <Backdrop show={this.state.modalIsOpen} /> */}
         <button
           className="Button"
           onClick={() =>
@@ -35,8 +33,6 @@ class App extends Component {
           Toggle
         </button>
         <br />
-        {/* {this.state.showBlock ? ( */}
-        {/* https://reactcommunity.org/react-transition-group/transition */}
         <Transition
           in={this.state.showBlock}
           timeout={1000}
@@ -65,20 +61,6 @@ class App extends Component {
             </>
           )}
         </Transition>
-        {/* ) : null} */}
-
-        {/* {this.state.modalIsOpen ? (
-          <Modal show={this.state.modalIsOpen} closed={this.closeModal} />
-        ) : null} */}
-
-        {/* <Transition
-          in={this.state.modalIsOpen}
-          timeout={500}
-          mountOnEnter
-          unmountOnExit
-        >
-          {(state) => <Modal show={state} closed={this.closeModal} />}
-        </Transition> */}
 
         <Modal show={this.state.modalIsOpen} closed={this.closeModal} />
         {this.state.modalIsOpen ? <Backdrop show /> : null}
